@@ -15,7 +15,7 @@
         <div class="columns is-centered">
           <div class="column is-4">
             <figure class="image is-128x300"  style="margin-left: auto; margin-right: auto;">
-              <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png", class: "profile_image is-rounded" %>
+              <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no-image.png", class: "profile_image is-rounded" %>
             </figure>
           </div>
           <div class="column is-8">
@@ -66,22 +66,22 @@
                 <div class="media-content">
                   <%= link_to vegetable_path(vegetable), class: "panel-block" do %>
                     <span class="panel-icon">
-                      <i class="fas fa-book" aria-hidden="true"></i>
+                      <i class="fas fa-carrot" aria-hidden="true"></i>
                     </span>
-                    このレシピを見る
+                    詳しく見る
                   <% end %>
                   <% if @user.id == current_user.id %>
                     <%= link_to edit_vegetable_path(vegetable), class: "panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-edit"></i>
                       </span>
-                      このレシピを編集する
+                      編集する
                     <% end %>
                     <%= link_to vegetable_path(vegetable), method: :delete, data: {confirm: "削除しますか？"}, class: "panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-trash"></i>
                       </span>
-                      このレシピを削除する
+                      削除する
                     <% end %>
                   <% end %>
                 </div>

@@ -25,7 +25,7 @@
               <div class="media">
                 <div class="media-left">
                   <figure class="image is-48x48">
-                    <%= attachment_image_tag vegetable.user, :profile_image, fallback: "no-image.png", class: "profile_image" %>
+                    <%= attachment_image_tag vegetable.user, :profile_image, :fill, 300, 300, fallback: "no-image.png", class: "profile_image" %>
                   </figure>
                 </div>
                 <div class="media-content">

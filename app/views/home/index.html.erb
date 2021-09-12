@@ -1,2 +1,24 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section class="section">
+  <article class="media">
+    <div class="media-content">
+      <div class="content has-text-centered">
+        <p><strong class="is-size-1" style="font-family: cursive;">VegeShare</strong></p>
+        <p class="is-size-3">大切に育てた野菜をあなたのもとへ</p>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <figure>
+            <div class="main-image"></div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </article>
+  <br>
+  <div class="columns is-centered">
+    <div class="column is-5"><br>
+      <%= link_to "ログイン", new_user_session_path, class: "button is-light is-fullwidth" %><br>
+      <%= link_to "新規登録", new_user_registration_path, class: "button is-light is-fullwidth" %>
+    </div>
+  </div>
+</section>

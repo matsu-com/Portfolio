@@ -1,4 +1,5 @@
 class VegetablesController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   def index
     @vegetables = Vegetable.all
   end
@@ -20,6 +21,9 @@ class VegetablesController < ApplicationController
 
   def edit
     @vegetable = Vegetable.find(params[:id])
+    if @vegetable.user != current_user
+      redirect_to vegetables_path, alert: "アクセスできません。"
+    end
   end
 
   def update
